@@ -43,6 +43,9 @@ float R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R12,R13,R14,R15,R16,R17,R18,R19,R20,R21
 float error;
 int inpt;
 
+// Mensaje
+String mensaje;
+
 float triangular(float a,float m,float b,float x)
 {
    float mu = 0.0;
@@ -248,14 +251,18 @@ void loop() {
   
   u = u + integral;
   pos = float(encoder.getCount())*116.0/63242.0;
+
+  mensaje = "{\"dinput\":\""+String(dinput)+"\"pos\":\""+String(pos)+"\",\"error\":\""+String(error)+"\",\"u\":\""+String(u)+"\"}";
+  //mensaje = "{\"temp\":\""+String(temp)+"\",\"humedad\":\""+String(humedad)+"\"}";
+//  Serial.print(dinput);
+//  Serial.print("\t");
+//  Serial.print(pos);
+//  Serial.print("\t");
+//  Serial.print(error);
+//  Serial.print("\t");
+//  Serial.println(u);
+  Serial.println(mensaje);
   
-  Serial.print(dinput);
-  Serial.print("\t");
-  Serial.print(pos);
-  Serial.print("\t");
-  Serial.print(error);
-  Serial.print("\t");
-  Serial.println(u);
   delay(10);
   
   if(u >= 0)

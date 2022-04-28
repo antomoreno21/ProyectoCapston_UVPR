@@ -1,0 +1,262 @@
+[
+    {
+        "id": "722a61c5ce55e5a4",
+        "type": "tab",
+        "label": "ProyectoCapston",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c453f0a82ff19109",
+        "type": "serial in",
+        "z": "722a61c5ce55e5a4",
+        "name": "",
+        "serial": "ad0159dd39df2c27",
+        "x": 50,
+        "y": 220,
+        "wires": [
+            [
+                "58758d9f3f89fe22"
+            ]
+        ]
+    },
+    {
+        "id": "58758d9f3f89fe22",
+        "type": "json",
+        "z": "722a61c5ce55e5a4",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "146b8538f27b4da6",
+                "c845f28558cf4ed5",
+                "ed161eb8e91a03bb",
+                "d95c939e83bea468",
+                "9ccc38741f5ad89f",
+                "981998b01ff9e894"
+            ]
+        ]
+    },
+    {
+        "id": "146b8538f27b4da6",
+        "type": "function",
+        "z": "722a61c5ce55e5a4",
+        "name": "",
+        "func": "msg.payload = msg.payload.dinput;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 40,
+        "wires": [
+            [
+                "d4da203dd5e1d671",
+                "15171e3d6eadafd5"
+            ]
+        ]
+    },
+    {
+        "id": "c845f28558cf4ed5",
+        "type": "function",
+        "z": "722a61c5ce55e5a4",
+        "name": "",
+        "func": "msg.payload = msg.payload.pos;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 120,
+        "wires": [
+            [
+                "d4da203dd5e1d671"
+            ]
+        ]
+    },
+    {
+        "id": "ed161eb8e91a03bb",
+        "type": "function",
+        "z": "722a61c5ce55e5a4",
+        "name": "",
+        "func": "msg.payload = msg.payload.error;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "d4da203dd5e1d671"
+            ]
+        ]
+    },
+    {
+        "id": "d95c939e83bea468",
+        "type": "function",
+        "z": "722a61c5ce55e5a4",
+        "name": "",
+        "func": "msg.payload = msg.payload.u;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 448,
+        "y": 284,
+        "wires": [
+            [
+                "d4da203dd5e1d671"
+            ]
+        ]
+    },
+    {
+        "id": "9ccc38741f5ad89f",
+        "type": "function",
+        "z": "722a61c5ce55e5a4",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 448,
+        "y": 364,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "981998b01ff9e894",
+        "type": "function",
+        "z": "722a61c5ce55e5a4",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 448,
+        "y": 444,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "15171e3d6eadafd5",
+        "type": "ui_slider",
+        "z": "722a61c5ce55e5a4",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "4a88c8c51a3d9a0c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "116",
+        "step": 1,
+        "x": 650,
+        "y": 40,
+        "wires": [
+            [
+                "d4da203dd5e1d671"
+            ]
+        ]
+    },
+    {
+        "id": "d4da203dd5e1d671",
+        "type": "ui_chart",
+        "z": "722a61c5ce55e5a4",
+        "name": "",
+        "group": "4a88c8c51a3d9a0c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 680,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad0159dd39df2c27",
+        "type": "serial-port",
+        "serialport": "COM7",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "4a88c8c51a3d9a0c",
+        "type": "ui_group",
+        "name": "Proyecto",
+        "tab": "bfb67b97427ba3b5",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "bfb67b97427ba3b5",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
