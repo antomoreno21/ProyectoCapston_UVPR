@@ -11,12 +11,12 @@
 #include <WiFi.h>
 
 //Datos de WiFi
-const char* ssid = "INFINITUM4956_2.4";  // Aquí debes poner el nombre de tu red
-const char* password = "Carbajal2104";  // Aquí debes poner la contraseña de tu red
+const char* ssid = "INFINITUMj2tf";  // Aquí debes poner el nombre de tu red
+const char* password = "38815dc9b3";  // Aquí debes poner la contraseña de tu red
 
 //Datos del broker MQTT
-const char* mqtt_server = "192.168.1.65"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
-IPAddress server(192,168,1,65);
+const char* mqtt_server = "192.168.1.64"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
+IPAddress server(192,168,1,64);
 
 // Objetos
 WiFiClient espClient; // Este objeto maneja los datos de conexion WiFi
@@ -115,8 +115,8 @@ void setup() {
   pinMode (ledPin, OUTPUT);
   pinMode (ledPin2, OUTPUT);
   // Entradas y salidas del controlador difuso
-  pinMode(22,OUTPUT);
-  pinMode(24,OUTPUT);
+  pinMode(25,OUTPUT);
+  pinMode(26,OUTPUT);
   pinMode(5,INPUT); 
   // Encoder del ESP32
   encoder.attachHalfQuad(19, 18);
@@ -172,7 +172,7 @@ void loop() {
   /********** Algoritmo difuso **********/
   input = encoder.getCount()*116/63242;
   pot = analogRead(A0);
-  dinput = pot * 5.0 * 23.2 / 1023.0;
+  dinput = 20;//pot * 5.0 * 23.2 / 1023.0;
   //inpt = analogRead(A0)/10;
   //input = float(inpt/10);
   Vs = trapezoidal(0.0,0.0,10.0,19.33,input);
@@ -321,12 +321,12 @@ void loop() {
   if(u >= 0)
   {
     u = u*255/100;
-    analogWrite(13,u);
+    analogWrite(25,u);
   }
   else
   {
     u=u*-255/100;
-    analogWrite(12,u);
+    analogWrite(26,u);
   }
   delay(10);
   /* Fin del algoritmo difuso */
@@ -336,7 +336,7 @@ void loop() {
     timeLast = timeNow; // Actualización de seguimiento de tiempo
 
     //Se construye el string correspondiente al JSON que contiene 3 variables
-    String json = "{\"dinput\":\""+String(dinput)+"\"pos\":\""+String(pos)+"\",\"error\":\""+String(error)+"\",\"u\":\""+String(u)+"\"}";
+    String json = "{\"dinput\":\""+String(dinput)+"\",\"pos\":\""+String(pos)+"\",\"error\":\""+String(error)+"\",\"u\":\""+String(u)+"\"}";
     Serial.println(json); // Se imprime en monitor solo para poder visualizar que el string esta correctamente creado
     int str_len = json.length() + 1;//Se calcula la longitud del string
     char char_array[str_len];//Se crea un arreglo de caracteres de dicha longitud

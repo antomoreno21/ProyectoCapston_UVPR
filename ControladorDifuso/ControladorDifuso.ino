@@ -87,8 +87,8 @@ float trapezoidal(float a,float b,float c, float d,float x)
 }
 
 void setup() {
-  pinMode(22,OUTPUT);
-  pinMode(24,OUTPUT);
+  pinMode(26,OUTPUT);
+  pinMode(25,OUTPUT);
   pinMode(2,INPUT);
   Serial.begin(115200); 
   
@@ -106,7 +106,7 @@ void setup() {
 void loop() {
   input = encoder.getCount()*116/63242;
   pot = analogRead(A0);
-  dinput = pot * 5.0 * 23.2 / 1023.0;
+  dinput = 20;//pot * 5.0 * 23.2 / 1023.0;
   //inpt = analogRead(A0)/10;
   //input = float(inpt/10);
   Vs = trapezoidal(0.0,0.0,10.0,19.33,input);
@@ -268,12 +268,12 @@ void loop() {
   if(u >= 0)
   {
     u = u*255/100;
-    analogWrite(13,u);
+    analogWrite(25,u);
   }
   else
   {
     u=u*-255/100;
-    analogWrite(12,u);
+    analogWrite(26,u);
   }
 }
 
