@@ -19,8 +19,16 @@ Proveer el servicio de una planta lineal basado en lógica difusa e Internet de 
 ### Introducción
 
 ### Equipo y material utilizado en el proyecto
+1. Raspberry pi 4 modelo de 8 GB
+2. Arduino Mega 
+3. Motor de corriente directa
+4. Encoder 
 
 ### Software utilizado
+1. Arduino IDE
+2. Node-RED
+3. Grafana
 
+### Desarrollo
 
 Imagen de la planta: https://uvmx-my.sharepoint.com/:f:/g/personal/antomoreno_uv_mx/EvuCFqBQq-1BlQ6VlcwIY0QBnQhaIY9Wz3qtjyPNQhQS2A?e=hPQkug
