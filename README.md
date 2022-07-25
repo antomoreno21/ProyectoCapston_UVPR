@@ -29,6 +29,10 @@ Proveer el servicio de una planta lineal basado en lógica difusa e Internet de 
 2. Node-RED
 3. Grafana
 
+### Instalación de programas
+
+#### Instalando Grafana en Windows
+
 ### Desarrollo
 
 Imagen de la planta: https://uvmx-my.sharepoint.com/:f:/g/personal/antomoreno_uv_mx/EvuCFqBQq-1BlQ6VlcwIY0QBnQhaIY9Wz3qtjyPNQhQS2A?e=hPQkug
