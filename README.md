@@ -32,7 +32,8 @@ Proveer el servicio de una planta lineal basado en lógica difusa e Internet de 
 ### Instalación de programas
 
 #### Instalando Grafana en Windows
-
+Revise la pagina oficial de Grafana: https://grafana.com/oss/grafana/
+Dirigase a la sección de Descargas, seleccione el sistema operativo en el que desea instalar Grafana. Para este proyecto se instalará en Windows 11.
 ### Desarrollo
 
 Imagen de la planta: https://uvmx-my.sharepoint.com/:f:/g/personal/antomoreno_uv_mx/EvuCFqBQq-1BlQ6VlcwIY0QBnQhaIY9Wz3qtjyPNQhQS2A?e=hPQkug
