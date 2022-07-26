@@ -31,14 +31,20 @@ Proveer el servicio de una planta lineal basado en lógica difusa e Internet de 
 
 ### Instalación de programas
 
-#### Instalación de Node-RED
+A continuación se enlistan los programas utilizados para desarrollar este proyecto así como los enlaces para instalarlos en su computadora.
+
+#### 1.- Instalación de Arduino
+
+#### 2.- Instalación de Node-RED
 Node-RED es una herramienta de programación para conectar dispositivos de hardware, API y servicios en línea. Si desea profundizar más en esta herramienta siga el siguiente enlace: https://nodered.org/ 
 
 Para la instalación en windows dirigase al siguiente enlace que detalla los comandos y herramientas a descargar para correr Node-RED en windows: https://nodered.org/docs/getting-started/windows 
 
 Para instalar en otros Sistemas Operativos: https://nodered.org/docs/getting-started/local
 
-#### Instación de Grafana en Windows
+#### 3.- Instalación de XAMPP
+
+#### 4.- Instalación de Grafana en Windows
 Revise la pagina oficial de Grafana: https://grafana.com/oss/grafana/
 
 Dirigase a la sección de Descargas, seleccione el sistema operativo en el que desea instalar Grafana. Para este proyecto se instalará en Windows 11.
