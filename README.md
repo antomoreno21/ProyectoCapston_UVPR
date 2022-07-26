@@ -32,8 +32,9 @@ Proveer el servicio de una planta lineal basado en lógica difusa e Internet de 
 ### Instalación de programas
 
 #### Instalación de Node-RED
-Node-RED es una herramienta de programación para conectar dispositivos de hardware, API y servicios en línea. Si desea profundizar más en esta herramienta siga el siguiente enlace: `https://nodered.org/`
-Para la instalación en windows dirigase al siguiente enlace que detalla los comandos y herramientas a descargar para correr Node-RED en windows: `https://nodered.org/docs/getting-started/windows`
+Node-RED es una herramienta de programación para conectar dispositivos de hardware, API y servicios en línea. Si desea profundizar más en esta herramienta siga el siguiente enlace: `https://nodered.org/`.
+
+Para la instalación en windows dirigase al siguiente enlace que detalla los comandos y herramientas a descargar para correr Node-RED en windows: `https://nodered.org/docs/getting-started/windows`.
 
 Para instalar en otros Sistemas Operativos: `https://nodered.org/docs/getting-started/local`
 
