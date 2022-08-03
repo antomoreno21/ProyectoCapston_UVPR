@@ -22,8 +22,10 @@ Prestar el servicio de una planta lineal basado en Lógica Difusa e Internet de 
 ### Equipo y material utilizado en el proyecto
 1. Computadora\Laptop
 2. Arduino Mega 2560
-3. Motor de corriente directa
-4. Encoder 
+3. Motor de corriente directa (24 VDC)
+4. Encoder de cuadratura
+5. Modulo Puente H Bts7960
+6. Cables Dupont M-M y H-M
 
 ### Software utilizado
 1. Arduino IDE
@@ -59,7 +61,13 @@ https://www.youtube.com/watch?v=grppSMHLueA&t=87s&ab_channel=TechGuruTech
 
 ### Desarrollo
 
+A continuación se muestra la estructura general del proyecto:
+![Estructura General](https://raw.githubusercontent.com/antomoreno21/ProyectoCapston_UVPR/main/Estructura%20del%20proyecto%20capstone.png)
+
 Imagen de la planta: https://uvmx-my.sharepoint.com/:f:/g/personal/antomoreno_uv_mx/EvuCFqBQq-1BlQ6VlcwIY0QBnQhaIY9Wz3qtjyPNQhQS2A?e=hPQkug
+
+### Resultados
+
 
 ![Grafica individual](https://raw.githubusercontent.com/antomoreno21/ProyectoCapston_UVPR/main/Grafica%20individual.png)
 
