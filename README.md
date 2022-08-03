@@ -70,8 +70,22 @@ Imagen de la planta:
 ![Planta lineal](https://raw.githubusercontent.com/antomoreno21/ProyectoCapston_UVPR/main/Planta%20lineal.png)
 
 Instalados los programas, visualizando la planta lineal y analizada la estructura general se procede al desarrollo de este proyecto.
-1. Abrir en su computadora Arduino IDE y cargar al Arduino Mega el siguiente código: [arduino](https://github.com/antomoreno21/ProyectoCapston_UVPR/blob/main/Codigo%20del%20Proyecto%20Capstone/Codigo%20del%20Proyecto%20Capstone.ino "arduino")
-2. 
+1. Abrir en su computadora Arduino IDE y cargar al Arduino Mega el siguiente código: [Codigo para el Arduino Mega](https://github.com/antomoreno21/ProyectoCapston_UVPR/blob/main/Codigo%20del%20Proyecto%20Capstone/Codigo%20del%20Proyecto%20Capstone.ino "Codigo para el Arduino Mega")
+2. Conectar el encoder a Vcc (5 Volts) y GND
+3. Conectar las salidas del encoder a los pines 18 y 19 del Arduino.
+4. Los pines 12 y 13 del Arduino Mega van conectados al Puente H en su pin de control correspondiente (RPWM y LPWM).
+5. Alimentar el puente H con 5 V y GND en los pines Vcc y GND (terminales macho). Además, conecte los pines R_EN y L_EN a Vcc.
+6. En la bornera del puente h, conecte la fuente de alimentación para el motor en B+ y B- (es importante que la fuente sea independiente y externa al arduino, de lo contrario podría dañar partes de su computadora).
+7. De la bornera del paso anterior, conecte los cables de alimentación del motor a M+ y M-.
+
+Hasta el momento, tiene la estructura fisica necesaria. Si requiere una prueba de que el encoder y el código están funcionando, conecte el arduino a la computadora y abra el monitor seral, en el cual observará las lecturas del encoder. 
+
+Los siguientes pasos corresponden a la configuración de Node-RED:
+
+8. Abra Node-Red desde la terminal escribiendo "node-red"
+9. Abra el navegador de internet y coloque lo siguiente: localhost:1880
+10. Realizados los pasos anteriores, dirigase al menu principal ubicado en la parte superior izquierda, de clic y seleccione la opción "Import".
+11. Copie el siguiente código: [Codigo para Node-RED](https://github.com/antomoreno21/ProyectoCapston_UVPR/blob/main/Interfaz%20en%20Node-Red/Flow%20en%20Node-RED.json "Codigo para Node-RED").
 
 ### Resultados
 El algoritmo basado en Logica Difusa embebido en el Arduino Mega 2560 funciono de forma adecuada para controlar la planta lineal, así como era de esperar que Node-RED y Grafana permitieran el control y monitoreo de dicha planta. A continuación se muestra el comportamiento del dispositivo graficando cada variable de control de manera individual:
