@@ -75,7 +75,7 @@ Instalados los programas, visualizando la planta lineal y analizada la estructur
 3. Conectar las salidas del encoder a los pines 18 y 19 del Arduino.
 4. Los pines 12 y 13 del Arduino Mega van conectados al Puente H en su pin de control correspondiente (RPWM y LPWM).
 5. Alimentar el puente H con 5 V y GND en los pines Vcc y GND (terminales macho). Además, conecte los pines R_EN y L_EN a Vcc.
-6. En la bornera del puente h, conecte la fuente de alimentación para el motor en B+ y B- (es importante que la fuente sea independiente y externa al arduino, de lo contrario podría dañar partes de su computadora).
+6. En la bornera del puente H, conecte la fuente de alimentación para el motor en B+ y B- (es importante que la fuente sea independiente y externa al arduino, de lo contrario podría dañar partes de su computadora).
 7. De la bornera del paso anterior, conecte los cables de alimentación del motor a M+ y M-.
 
 Hasta el momento, tiene la estructura fisica necesaria. Si requiere una prueba de que el encoder y el código están funcionando, conecte el arduino a la computadora y abra el monitor seral, en el cual observará las lecturas del encoder. 
@@ -86,6 +86,12 @@ Los siguientes pasos corresponden a la configuración de Node-RED:
 9. Abra el navegador de internet y coloque lo siguiente: localhost:1880
 10. Realizados los pasos anteriores, dirigase al menu principal ubicado en la parte superior izquierda, de clic y seleccione la opción "Import".
 11. Copie el siguiente código: [Codigo para Node-RED](https://github.com/antomoreno21/ProyectoCapston_UVPR/blob/main/Interfaz%20en%20Node-Red/Flow%20en%20Node-RED.json "Codigo para Node-RED").
+12. Pegue el código en la ventana emergente del paso 10 y de en Import ubicado en la parte inferior izquierda.
+13. Clic en Deploy.
+14. Para abrir la interfaz de control en Node-RED, dirigase a la opción de Dashboard y despliegue la interfaz en una nueva ventana del navegador. En dicha ventana podrá modificar la posición de la base movil que tiene la planta.
+
+Ahora configuramos la interfaz Grafica en Grafana:
+15. 
 
 ### Resultados
 El algoritmo basado en Logica Difusa embebido en el Arduino Mega 2560 funciono de forma adecuada para controlar la planta lineal, así como era de esperar que Node-RED y Grafana permitieran el control y monitoreo de dicha planta. A continuación se muestra el comportamiento del dispositivo graficando cada variable de control de manera individual:
