@@ -91,6 +91,7 @@ Los siguientes pasos corresponden a la configuración de Node-RED:
 14. Para abrir la interfaz de control en Node-RED, dirigase a la opción de Dashboard y despliegue la interfaz en una nueva ventana del navegador. En dicha ventana podrá modificar la posición de la base movil que tiene la planta.
 
 Ahora configuramos la interfaz Grafica en Grafana:
+
 15. Importe el código de la interfaz grafica a través del archivo con extensión .json o copie y pegue el contenido del archivo: [Interfaz en Grafana](https://github.com/antomoreno21/ProyectoCapston_UVPR/tree/main/Interfaz%20en%20Grafana "Interfaz en Grafana").
 16. Descargado el archivo del paso 15 o el contenido del mismo en el portapapeles, dirigase a una ventana nueva del navegador y coloque lo siguiente: localhost:3000. Esto permitirá abrir la interfaz de Grafana. Es importante que ya cuente con su usuario y contraseña, de lo contrario configure estos parametros.
 17. Ubiquese en la pantalla principal de Grafana, dé clic en simbolo "+" y seleccione la opción Import. Cargue el archivo del paso anterior.
