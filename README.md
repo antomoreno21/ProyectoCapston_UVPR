@@ -56,7 +56,7 @@ Dirigase a la sección de Descargas, seleccione el sistema operativo en el que d
 Siga los pasos de instalación que se muestran en el siguiente video:
 https://www.youtube.com/watch?v=grppSMHLueA&t=87s&ab_channel=TechGuruTech
 
-![](https://uvmx-my.sharepoint.com/:i:/g/personal/antomoreno_uv_mx/EU9Lb9mJndxAmZeCA1j1nFwBn0EK9tF-rujYySCkNynYGw?e=qXFURZ)
+![](https://raw.githubusercontent.com/antomoreno21/ProyectoCapston_UVPR/main/Grafica%20general.png)
 
 ### Desarrollo
 
