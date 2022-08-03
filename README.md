@@ -9,29 +9,31 @@ Elaborado por:
 |Arturo Marrero Mendez   |Documentación del proyecto   |
  
 ### Objetivo general:
-Proveer el servicio de una planta lineal basado en lógica difusa e Internet de las Cosas dentro de la institución, con posibilidad de extender el servicio a investigadores, docentes e industria privada. 
+Prestar el servicio de una planta lineal basado en Lógica Difusa e Internet de las Cosas dentro de la institución, con posibilidad de extender el servicio a investigadores, docentes e industria privada. 
 
 ### Objetivo especifico: 
 1. Construcción de una planta lineal con un motor de corriente directa, encoder y una plataforma móvil.
-2. Diseño e implementación del algoritmo para controlar la planta lineal basado en la lógica difusa.
-3. Diseño de una interfaz en Node-RED para la gestión, monitoreo y control de la planta utilizando el protocolo de comunicación MQTT y UART.
+2. Diseño e implementación del algoritmo para controlar la planta lineal basado en la Lógica Difusa.
+3. Diseño de una interfaz en Grafana para monitoreo de la planta utilizando el protocolo de comunicación UART.
+4. Diseño de la interfaz para el ingreso de datos en Node-RED.
 
 ### Introducción
 
 ### Equipo y material utilizado en el proyecto
-1. Raspberry pi 4 modelo de 8 GB
-2. Arduino Mega 
+1. Computadora\Laptop
+2. Arduino Mega 2560
 3. Motor de corriente directa
 4. Encoder 
 
 ### Software utilizado
 1. Arduino IDE
 2. Node-RED
-3. Grafana
+3. XAMPP
+4. Grafana
 
 ### Instalación de programas
 
-A continuación se enlistan los programas utilizados para desarrollar este proyecto así como los enlaces para instalarlos en su computadora.
+A continuación se enlistan los programas utilizados para desarrollar este proyecto, así como los enlaces para instalarlos en su computadora\laptop.
 
 #### 1.- Instalación de Arduino
 Arduino ofrece hardware y software libre, lo que permite desarrollar código en su plataforma, compartirlo en la comunidad y programar las tarjetas de desarrollo que ofrece dicha marca. Descarga Arduino IDE: https://www.arduino.cc/en/software
@@ -46,16 +48,13 @@ Para la instalación en windows dirigase al siguiente enlace que detalla los com
 Para instalar en otros Sistemas Operativos: https://nodered.org/docs/getting-started/local
 
 #### 3.- Instalación de XAMPP
-XAMPP es una distribución de Apache completamente gratuita y fácil de instalar que contiene MariaDB, PHP y Perl. El paquete de instalación de XAMPP ha sido diseñado para ser fácil de instalar y usar.
-https://www.apachefriends.org/es/index.html
+XAMPP es una distribución de Apache completamente gratuita y fácil de instalar que contiene MariaDB, PHP y Perl. El paquete de instalación de XAMPP ha sido diseñado para ser fácil de instalar y usar. Consulte el siguiente enlace: https://www.apachefriends.org/es/index.html
 
 #### 4.- Instalación de Grafana en Windows
-Revise la pagina oficial de Grafana: https://grafana.com/oss/grafana/
+Grafana es un software libre basado en licencia de Apache 2.0, que permite la visualización y el formato de datos métricos. Permite crear cuadros de mando y gráficos a partir de múltiples fuentes. Revise la pagina oficial de Grafana: https://grafana.com/oss/grafana/
 
-Dirigase a la sección de Descargas, seleccione el sistema operativo en el que desea instalar Grafana. Para este proyecto se instalará en Windows 11.
-Siga los pasos de instalación que se muestran en el siguiente video:
+Para instalar Grafana en su computadora\laptop dirigase a la sección de "Descargas", seleccione el sistema operativo en el que desea instalar Grafana. Cabe mencionar que, para este proyecto se instalará en Windows 11. Te recomiendo seguir los pasos de instalación que se muestran en el siguiente video:
 https://www.youtube.com/watch?v=grppSMHLueA&t=87s&ab_channel=TechGuruTech
-
 
 
 ### Desarrollo
