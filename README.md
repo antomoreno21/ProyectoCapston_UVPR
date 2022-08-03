@@ -90,6 +90,11 @@ Los siguientes pasos corresponden a la configuración de Node-RED:
 13. Clic en Deploy.
 14. Para abrir la interfaz de control en Node-RED, dirigase a la opción de Dashboard y despliegue la interfaz en una nueva ventana del navegador. En dicha ventana podrá modificar la posición de la base movil que tiene la planta.
 
+Continuamos con la integración de la base de datos. Para esto utilizaremos XAMPP.
+
+15. Abrir XAMPP en la computadora\laptop.
+16. Dar clic en el boton "Start" que corresponde al servicio de Apache y MySQL. 
+
 Ahora configuramos la interfaz Grafica en Grafana:
 
 15. Importe el código de la interfaz grafica a través del archivo con extensión .json o copie y pegue el contenido del archivo: [Interfaz en Grafana](https://github.com/antomoreno21/ProyectoCapston_UVPR/tree/main/Interfaz%20en%20Grafana "Interfaz en Grafana").
