@@ -94,13 +94,16 @@ Continuamos con la integración de la base de datos. Para esto utilizaremos XAMP
 
 15. Abrir XAMPP en la computadora\laptop.
 16. Dar clic en el boton "Start" que corresponde al servicio de Apache y MySQL. 
+17. Presionar el boton "Admin" correspondiente al servicio de MySQL para abrir el gestor phpMyAdmin en el navegador y con ello generar la base de datos.
+18. En la interfaz grafica de phpMyAdmin, generar una base de datos con el nombre de "proyectocapstone".
+19. Generar una tabla en la base de datos anterior con el nombre "variablesdelproyecto" y agregar 5 campos con los siguientes nombres y tipos: time(timestamp-ON UPDATE CURRENT_TIMESTAMP()),  distancia(float), posicion(float), error(float) y u(float).
 
-Ahora configuramos la interfaz Grafica en Grafana:
+Con esto finaliza la creación de la base de datos, ahora configuramos la interfaz Grafica en Grafana:
 
-15. Importe el código de la interfaz grafica a través del archivo con extensión .json o copie y pegue el contenido del archivo: [Interfaz en Grafana](https://github.com/antomoreno21/ProyectoCapston_UVPR/tree/main/Interfaz%20en%20Grafana "Interfaz en Grafana").
-16. Descargado el archivo del paso 15 o el contenido del mismo en el portapapeles, dirigase a una ventana nueva del navegador y coloque lo siguiente: localhost:3000. Esto permitirá abrir la interfaz de Grafana. Es importante que ya cuente con su usuario y contraseña, de lo contrario configure estos parametros.
-17. Ubiquese en la pantalla principal de Grafana, dé clic en simbolo "+" y seleccione la opción Import. Cargue el archivo del paso anterior.
-18. La interfaz de Grafana deberá desplegarse.
+20. Importe el código de la interfaz grafica a través del archivo con extensión .json o copie y pegue el contenido del archivo: [Interfaz en Grafana](https://github.com/antomoreno21/ProyectoCapston_UVPR/tree/main/Interfaz%20en%20Grafana "Interfaz en Grafana").
+21. Descargado el archivo del paso 15 o el contenido del mismo en el portapapeles, dirigase a una ventana nueva del navegador y coloque lo siguiente: localhost:3000. Esto permitirá abrir la interfaz de Grafana. Es importante que ya cuente con su usuario y contraseña, de lo contrario configure estos parametros.
+22. Ubiquese en la pantalla principal de Grafana, dé clic en simbolo "+" y seleccione la opción Import. Cargue el archivo del paso anterior.
+23. La interfaz de Grafana deberá desplegarse.
 
 Para finalizar, tenga abierto Node-RED, Grafana, el Arduino Mega conectado a la computadora, así como las fuentes de alimentación con sus respectivos voltajes. Con todo esto podrá monitorear, analizar y manupular la planta lineal del proyecto.
 
