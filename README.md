@@ -64,7 +64,8 @@ https://www.youtube.com/watch?v=grppSMHLueA&t=87s&ab_channel=TechGuruTech
 A continuación se muestra la estructura general del proyecto:
 ![Estructura General](https://raw.githubusercontent.com/antomoreno21/ProyectoCapston_UVPR/main/Estructura%20del%20proyecto%20capstone.png)
 
-Imagen de la planta: https://uvmx-my.sharepoint.com/:f:/g/personal/antomoreno_uv_mx/EvuCFqBQq-1BlQ6VlcwIY0QBnQhaIY9Wz3qtjyPNQhQS2A?e=hPQkug
+Imagen de la planta: 
+![Planta lineal](https://raw.githubusercontent.com/antomoreno21/ProyectoCapston_UVPR/main/Planta%20lineal.png)
 
 ### Resultados
 El algoritmo basado en Logica Difusa embebido en el Arduino Mega 2560 funciono de forma adecuada para controlar la planta lineal, así como era de esperar que Node-RED y Grafana permitieran el control y monitoreo de dicha planta. A continuación se muestra el comportamiento del dispositivo graficando cada variable de control de manera individual:
