@@ -70,7 +70,7 @@ Imagen de la planta:
 ![Planta lineal](https://raw.githubusercontent.com/antomoreno21/ProyectoCapston_UVPR/main/Planta%20lineal.png)
 
 Instalados los programas, visualizando la planta lineal y analizada la estructura general se procede al desarrollo de este proyecto.
-1. Abrir en su computadora Arduino IDE y cargar al Arduino Mega el siguiente código: [Codigo](![](https://github.com/antomoreno21/ProyectoCapston_UVPR/blob/main/Codigo%20del%20Proyecto%20Capstone/Codigo%20del%20Proyecto%20Capstone.ino)[Código para el Arduino Mega "aaaa")
+1. Abrir en su computadora Arduino IDE y cargar al Arduino Mega el siguiente código: [arduino](https://github.com/antomoreno21/ProyectoCapston_UVPR/blob/main/Codigo%20del%20Proyecto%20Capstone/Codigo%20del%20Proyecto%20Capstone.ino "arduino")
 2. 
 
 ### Resultados
