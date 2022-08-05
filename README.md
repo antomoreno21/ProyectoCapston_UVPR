@@ -11,21 +11,21 @@ Elaborado por:
 ### Objetivo general:
 Prestar el servicio de una planta lineal basado en Lógica Difusa e Internet de las Cosas dentro de la institución, con posibilidad de extender el servicio a investigadores, docentes e industria privada. 
 
-### Objetivo especifico: 
+### Objetivo específico: 
 1. Construcción de una planta lineal con un motor de corriente directa, encoder y una plataforma móvil.
 2. Diseño e implementación del algoritmo para controlar la planta lineal basado en la Lógica Difusa.
 3. Diseño de una interfaz en Grafana para monitoreo de la planta utilizando el protocolo de comunicación UART.
 4. Diseño de la interfaz para el ingreso de datos en Node-RED.
 
-### Introducción
 
 ### Equipo y material utilizado en el proyecto
-1. Computadora\Laptop
+1. Computadora/Laptop
 2. Arduino Mega 2560
 3. Motor de corriente directa (24 VDC)
 4. Encoder de cuadratura
 5. Modulo Puente H Bts7960
 6. Cables Dupont M-M y H-M
+7. Sensor de corriente de efecto Hall
 
 ### Software utilizado
 1. Arduino IDE
@@ -40,12 +40,12 @@ A continuación se enlistan los programas utilizados para desarrollar este proye
 #### 1.- Instalación de Arduino
 Arduino ofrece hardware y software libre, lo que permite desarrollar código en su plataforma, compartirlo en la comunidad y programar las tarjetas de desarrollo que ofrece dicha marca. Descarga Arduino IDE: https://www.arduino.cc/en/software
 
-Nota: es necesario contar con un Arduino Mega 2560, debido a que el código esta enfocado en los recursos que tiene esta tarjeta.
+Nota: es necesario contar con un Arduino Mega 2560, debido a que el código está enfocado en los recursos que tiene esta tarjeta.
 
 #### 2.- Instalación de Node-RED
 Node-RED es una herramienta de programación para conectar dispositivos de hardware, API y servicios en línea. Si desea profundizar más en esta herramienta siga el siguiente enlace: https://nodered.org/ 
 
-Para la instalación en windows dirigase al siguiente enlace que detalla los comandos y herramientas a descargar para correr Node-RED en windows: https://nodered.org/docs/getting-started/windows 
+Para la instalación en Windows diríjase al siguiente enlace que detalla los comandos y herramientas a descargar para correr Node-RED en Windows: https://nodered.org/docs/getting-started/windows 
 
 Para instalar en otros Sistemas Operativos: https://nodered.org/docs/getting-started/local
 
@@ -53,9 +53,9 @@ Para instalar en otros Sistemas Operativos: https://nodered.org/docs/getting-sta
 XAMPP es una distribución de Apache completamente gratuita y fácil de instalar que contiene MariaDB, PHP y Perl. El paquete de instalación de XAMPP ha sido diseñado para ser fácil de instalar y usar. Consulte el siguiente enlace: https://www.apachefriends.org/es/index.html
 
 #### 4.- Instalación de Grafana en Windows
-Grafana es un software libre basado en licencia de Apache 2.0, que permite la visualización y el formato de datos métricos. Permite crear cuadros de mando y gráficos a partir de múltiples fuentes. Revise la pagina oficial de Grafana: https://grafana.com/oss/grafana/
+Grafana es un software libre basado en licencia de Apache 2.0, que permite la visualización y el formato de datos métricos. Permite crear cuadros de mando y gráficos a partir de múltiples fuentes. Revise la página oficial de Grafana: https://grafana.com/oss/grafana/
 
-Para instalar Grafana en su computadora\laptop dirigase a la sección de "Descargas", seleccione el sistema operativo en el que desea instalar Grafana. Cabe mencionar que, para este proyecto se instalará en Windows 11. Te recomiendo seguir los pasos de instalación que se muestran en el siguiente video:
+Para instalar Grafana en su computadora\laptop diríjase a la sección de "Descargas", seleccione el sistema operativo en el que desea instalar Grafana. Cabe mencionar que, para este proyecto se instalará en Windows 11. Te recomiendo seguir los pasos de instalación que se muestran en el siguiente video:
 https://www.youtube.com/watch?v=grppSMHLueA&t=87s&ab_channel=TechGuruTech
 
 
