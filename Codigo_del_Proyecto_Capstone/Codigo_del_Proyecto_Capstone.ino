@@ -5,18 +5,35 @@
  *  Arturo Marrero Mendez
  * 
  * Fecha:
- *  AGREGAR
+ *  05/08/2022
  * 
  * Descripción:
- *  AGREGAR
- * 
+ *  El siguiente código está basado en la lógica difusa y
+ *  el algoritmo es implementado en un Arduino Mega.
+ *  
  * Componentes:
  *  Arduino MEGA 2560 
- *  Encoder
+ *  Encoder de cuadratura
+ *  Sensor de corriente
  * 
  * Conexión:
- *  AGREGAR
+ *  Puerto Serial
  */
+
+
+/***************Sensor corriente con filtro***************/
+const int sensorPin = A0;
+float Sensibilidad = 1 / 0.185;
+
+/***************Kalman variables***************/
+float varVolt = 1.121842E-05;
+float varProcess = 1e-9;
+float Pc = 0.0;
+float G = 0.0;
+float P = 1.0;
+float Xp = 0.0;
+float Zp = 0.0;
+float Xe = 0.0;
 
 int stpnt=A0;
 volatile long int contador=0;                 //Contador de pulsos
@@ -64,7 +81,7 @@ String json;
 long timeNow, timeLast; 
 int wait = 100;  //Indica la espera cada 100 milisegundos
 
-/***************AGREGAR TEXTO***************/
+/***************Variable de error***************/
 float error;
 int inpt;
 
@@ -135,6 +152,18 @@ void loop(){
   db=triangular(58,77.33,93.66,dinput);
   dMb=triangular(77.42,93.75,116.0,dinput);
   dVb=trapezoidal(93.66,106,116.0,116.0,dinput);
+
+////Sensor medición
+ int sensorVal = analogRead(sensorPin);
+ float voltage = sensorVal * 5.0 /1023.0;
+ float I = (voltage - 2.5)*Sensibilidad;
+ //kalman Process
+ Pc = P + varProcess;
+ G = Pc / (Pc + varVolt);
+ P = (1-G) * Pc;
+ Xp = Xe;
+ Zp = Xp;
+ Xe = G*(I - Zp) + Xp;
   
   // Diagonal principal HOLD
   R1=Vs*dVs;
@@ -264,7 +293,7 @@ void loop(){
   // Manda un mensaje por Serial cada 100 milisegundos
   if (timeNow - timeLast > wait) { 
     timeLast = timeNow; // Actualización de seguimiento de tiempo
-    String json = "{\"dinput\":\""+String(dinput)+"\",\"pos\":\""+String(pos)+
+    String json = "{\"Xe\":"+String(Xe)+",\"dinput\":\""+String(dinput)+"\",\"pos\":\""+String(pos)+
                   "\",\"error\":\""+String(error)+"\",\"u\":\""+String(u)+"\"}";
     Serial.println(json);
   }
