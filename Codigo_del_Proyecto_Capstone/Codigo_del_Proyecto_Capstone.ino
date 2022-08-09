@@ -85,41 +85,6 @@ int wait = 100;  //Indica la espera cada 100 milisegundos
 float error;
 int inpt;
 
-float triangular(float a,float m,float b,float x)
-{
-  float mu = 0.0;
-  if(x>=a && x <=m){
-    mu = (x-a)/(m-a);
-  }
-  else if(x>=m && x <= b){
-    mu = (x-b)/(m-b);
-  }
-  else{
-    mu = 0.0;}
-  
-  return(mu);
-}
-
-float trapezoidal(float a,float b,float c, float d,float x)
-{
-  float mu = 0.0;
-  
-  if(x>=a && x <b){
-    mu = (x-a)/(b-a);
-  }
-  else if(x>=b && x<c){
-    mu = 1.0;
-  }
-  else if(x>=c && x <= d){
-    mu = (x-d)/(c-d);
-  }
-  else{
-    mu = 0.0;
-  }
-  
-  return(mu);
-}
-
 void setup() {
   pinMode(12,OUTPUT);
   pinMode(13,OUTPUT);
@@ -138,20 +103,6 @@ void loop(){
   }
   
   input=contador*116/63242;
-  Vs=trapezoidal(0.0,0.0,10.0,19.33,input);
-  Ms=triangular(0.0,19.33,38.66,input);
-  s=triangular(19.33,38.66,58,input);
-  m=triangular(36.66,58,77.33,input);
-  b=triangular(58,77.33,93.66,input);
-  Mb=triangular(77.42,93.75,116.0,input);
-  Vb=trapezoidal(93.66,106,116,116.0,input);
-  dVs=trapezoidal(0.0,0.0,10.0,19.33,dinput);
-  dMs=triangular(0.0,19.33,38.66,dinput);
-  ds=triangular(19.33,38.66,58,dinput);
-  dm=triangular(36.66,58,77.33,dinput);
-  db=triangular(58,77.33,93.66,dinput);
-  dMb=triangular(77.42,93.75,116.0,dinput);
-  dVb=trapezoidal(93.66,106,116.0,116.0,dinput);
 
 ////Sensor medición
  int sensorVal = analogRead(sensorPin);
@@ -307,50 +258,4 @@ void loop(){
     analogWrite(12,u);
   }
   delay(10);
-}
-
-float MAX(float num1, float num2, float num3) {
-  float resultado = 0.0;
-  if (num1 >= num2 && num1 >= num3){
-    resultado = num1;
-  } 
-  else if (num2 >= num1 && num2 >= num3){
-    resultado = num2;
-  } 
-  else if (num3 >= num1 && num3 >= num2){
-    resultado = num3;
-  }
-    return resultado;
-}
-
-void areatriangle(float a, float b, float c, float mi){
-  float xab,xbc,major,minor,area;
-
-  //Despejando los parametros de x
-  xab=(b-a)*mi+a;
-  xbc=(b-c)*mi+c;
-
-  //Cálculo de bases
-  major=c-a; //Calculando la base mayor
-  minor=xbc-xab; //Calculando la base menor
-
-  if (mi>=1){
-    area=major*mi/2;
-  }
-  else{
-    area=mi*(minor+major)/2;
-  }
-}
-
-void encoder(){
-  ant = act;                    //Guardar el valor actual en la variable ant
-  act = PIND&12;                //enmascaramiento del valor actual
-  
-  //cuenta ascendente
-  if(ant == 12 && act == 4)  
-    contador++;
-    
-  //cuenta descendente
-  if(ant == 4 && act == 12) 
-    contador--;
 }
